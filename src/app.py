@@ -111,7 +111,7 @@ async def get_telemetry_metrics(data: MetricsRequest):
         metrics = calculate_metrics(df_region, threshold)
         results[region.lower()] = metrics # Ensure region keys are lowercase for consistency
     
-    return results
+    return {"regions": results}
 
 # --- Test Endpoint (Optional, for Vercel health check) ---
 @app.get("/")
