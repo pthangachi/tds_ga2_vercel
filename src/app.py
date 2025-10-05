@@ -95,7 +95,7 @@ def calculate_metrics(df_filtered, threshold):
     }
 
 # --- POST Endpoint ---
-@app.post("/api/telemetry")
+@app.post("/api/latency")
 async def get_telemetry_metrics(data: MetricsRequest):
     """
     Calculates and returns per-region performance metrics based on the input regions and latency threshold.
