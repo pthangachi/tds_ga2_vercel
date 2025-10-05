@@ -13,15 +13,13 @@ class MetricsRequest(BaseModel):
 # --- FastAPI App Initialization ---
 app = FastAPI()
 
-# --- CORS Configuration ---
-# Enable CORS for POST requests from any origin (Access-Control-Allow-Origin: *)
-origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"] # important
 )
 
 
