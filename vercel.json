@@ -1,15 +1,7 @@
 {
-  "version": 2,
-  "builds": [
+  "headers": [
     {
-      "src": "api/telemetry.py",  // Source file location
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/telemetry.py" // Directs traffic to the Python file
+      "source": "/api/(.*)",
     }
   ]
 }
